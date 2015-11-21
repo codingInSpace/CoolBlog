@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 # For static asset serving and loggin on Heroku
 gem 'rails_12factor', group: :production
+#puma server
+gem 'puma'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
