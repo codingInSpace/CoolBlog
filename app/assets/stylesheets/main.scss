@@ -1,0 +1,46 @@
+@import "bootstrap";
+
+$darkblue: #0D47A1;
+$highlightblue: #2196F3;
+
+a {
+    text-decoration: none;
+    color: $highlightblue;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.bar {
+   background: $darkblue;
+   color: #fff;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+@media (min-width: 48em) {
+  .content {
+      padding: 2em 3em 0;
+      margin-left: 25%;
+  }
+
+  .header {
+      margin: 80% 2em 0;
+      text-align: right;
+  }
+
+  .bar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+  }
+}

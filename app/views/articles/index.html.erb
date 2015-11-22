@@ -1,16 +1,23 @@
-<h1>Welcome to the greatest and best blog in the world</h1>
-<%= link_to 'New article', new_article_path %>
-<table>
-  <% @articles.each do |article| %>
-    <tr>
-      <td><strong><%= article.title %></strong></td>
-      <td><%= article.text %></td>
-      <td>( <%= article.comments.count %> comments)</td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="bar col-md-3">
+  <div class="header">
+    <h1>Welcome to the greatest and best blog in the world</h1>
+  </div>
+</div>
+
+<div class="content col-md-9">
+  <%= link_to 'New article', new_article_path %>
+  <table>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><strong><%= article.title %></strong></td>
+        <td><%= article.text %></td>
+        <td>( <%= article.comments.count %> comments)</td>
+        <td><%= link_to 'Show', article_path(article) %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article_path(article),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
