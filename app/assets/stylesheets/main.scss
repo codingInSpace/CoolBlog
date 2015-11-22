@@ -44,3 +44,9 @@ a:focus {
       bottom: 0;
   }
 }
+
+@media (max-width: 48em) {
+  .bar {
+    padding: 10px;
+  }
+}
