@@ -32,7 +32,7 @@ a:focus {
   border-top: solid 1px rgba(30, 30, 30, 0.1);
 }
 
-@media (min-width: 48em) {
+@media only screen and (min-width: 48em) {
   .content {
       padding: 2em 3em 0;
       margin-left: 25%;
@@ -50,7 +50,7 @@ a:focus {
   }
 }
 
-@media (max-width: 48em) {
+@media only screen and (max-width: 48em) {
   .bar {
     padding: 10px;
   }
