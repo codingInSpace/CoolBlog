@@ -20,8 +20,8 @@
         </p>
       </div>
 
-      <% if article.comments.count > 0 %>
-        <div class="comments">
+      <div class="comments">
+        <% if article.comments.count > 0 %>
           <p><%= pluralize(article.comments.count, "comment") %>
             <% if article.comments.count > 3 %>
               <%= link_to '(show all)', article_path(article) %>
@@ -31,8 +31,9 @@
             <p><strong><%= comment.commenter %></strong> wrote:</p>
             <p><%= comment.body %></p>
           <% end %>
-        </div>
-      <% end %>
+        <% end %>
+        <%= link_to 'Write a comment', article_path(article) %>
+      </div>
 
     </div>
   <% end %>
