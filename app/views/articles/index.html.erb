@@ -11,16 +11,18 @@
     <div class="post">
       <h2><%= article.title %></h2>
       <p><%= article.text %></p>
-      <p>
-        <%= link_to 'Edit', edit_article_path(article) %>,
-        <%= link_to 'Delete', article_path(article),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-      </p>
+      <div class="action-links">
+        <p>
+          <%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Delete', article_path(article),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+        </p>
+      </div>
 
       <% if article.comments.count > 0 %>
         <div class="comments">
-          <p><%= pluralize(article.comments.count, "comment") %> 
+          <p><%= pluralize(article.comments.count, "comment") %>
             <% if article.comments.count > 3 %>
               <%= link_to '(show all)', article_path(article) %>
             <% end %>

@@ -2,10 +2,14 @@
 
 $darkblue: #0D47A1;
 $highlightblue: #2196F3;
+$diminishedblue: rgba(33, 150, 243, 0.4);
 
 a {
     text-decoration: none;
     color: $highlightblue;
+    .action-links & {
+      color: $diminishedblue;
+    }
 }
 a:hover,
 a:focus {
