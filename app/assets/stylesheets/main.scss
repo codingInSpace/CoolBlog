@@ -45,7 +45,7 @@ a:focus {
 }
 
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: $screen-sm-max) {
   .content {
       padding: 2em 3em 0;
       margin-left: 25%;
@@ -63,7 +63,7 @@ a:focus {
   }
 }
 
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: $screen-sm-max) {
   .bar {
     padding: 10px;
   }
