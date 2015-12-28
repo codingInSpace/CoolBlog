@@ -3,6 +3,7 @@
 $darkblue: #0D47A1;
 $highlightblue: #2196F3;
 $diminishedblue: rgba(33, 150, 243, 0.4);
+$headerFontSize: 22pt;
 
 a {
     text-decoration: none;
@@ -20,6 +21,12 @@ a:focus {
     text-align: center;
     top: auto;
     margin: 3em auto;
+}
+
+.header .account-links {
+	position: absolute;
+	top: 1em;
+	right: 2em;
 }
 
 .bar {
@@ -52,9 +59,15 @@ a:focus {
   }
 
   .header {
-      margin: 80% 2em 0;
       text-align: right;
-  }
+      margin: 80% 2em 0;
+	}
+	.header .account-links {
+		/*position: absolute;*/
+		top: auto;
+		right: 3.2em; 	/*lol*/
+		bottom: 2em;
+	}
 
   .bar {
       position: fixed;
