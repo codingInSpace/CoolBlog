@@ -1,19 +1,17 @@
-<div class="content col-md-9">
-  <p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-  </p>
-  <p>
-    <strong>Text:</strong>
-    <%= @article.text %>
-  </p>
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
 
-  <h4>Comments</h4>
-  <%= render @article.comments %>
+<h4>Comments</h4>
+<%= render @article.comments %>
 
-  <h4>Add a comment:</h4>
-  <%= render 'comments/form' %>
+<h4>Add a comment:</h4>
+<%= render 'comments/form' %>
 
-  <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Back', articles_path %>
-</div>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

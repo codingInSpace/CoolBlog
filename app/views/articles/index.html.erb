@@ -1,34 +1,32 @@
-<div class="content col-md-9">
-  <%= link_to 'New article', new_article_path %>
+<%= link_to 'New article', new_article_path %>
 
-  <% @articles.each do |article| %>
-    <div class="post">
-      <h2><%= article.title %></h2>
-      <p><%= article.text %></p>
-      <div class="action-links">
-        <p>
-          <%= link_to 'Edit', edit_article_path(article) %>
-          <%= link_to 'Delete', article_path(article),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
-        </p>
-      </div>
+<% @articles.each do |article| %>
+	<div class="post">
+		<h2><%= article.title %></h2>
+		<p><%= article.text %></p>
+		<div class="action-links">
+			<p>
+				<%= link_to 'Edit', edit_article_path(article) %>
+				<%= link_to 'Delete', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure?' } %>
+			</p>
+		</div>
 
-      <div class="comments">
-        <% if article.comments.count > 0 %>
-          <p><%= pluralize(article.comments.count, "comment") %>
-            <% if article.comments.count > 3 %>
-              <%= link_to '(show all)', article_path(article) %>
-            <% end %>
-          </p>
-          <% article.comments.limit(3).each do |comment| %>
-            <p><strong><%= comment.commenter %></strong> wrote:</p>
-            <p><%= comment.body %></p>
-          <% end %>
-        <% end %>
-        <%= link_to 'Write a comment', article_path(article) %>
-      </div>
+		<div class="comments">
+			<% if article.comments.count > 0 %>
+				<p><%= pluralize(article.comments.count, "comment") %>
+					<% if article.comments.count > 3 %>
+						<%= link_to '(show all)', article_path(article) %>
+					<% end %>
+				</p>
+				<% article.comments.limit(3).each do |comment| %>
+					<p><strong><%= comment.commenter %></strong> wrote:</p>
+					<p><%= comment.body %></p>
+				<% end %>
+			<% end %>
+			<%= link_to 'Write a comment', article_path(article) %>
+		</div>
 
-    </div>
-  <% end %>
-</div>
+	</div>
+<% end %>
