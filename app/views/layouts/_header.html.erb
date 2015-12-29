@@ -1,9 +1,12 @@
 <div class="header">
 	<h1>Welcome to the greatest and best blog in the world</h1>
 
-	<div class="account-links">
+	<div class="account-info">
 		<% if user_signed_in? %>
-			<%= content_tag :p, link_to( 'log out', destroy_user_session_path, method: :delete ) %>
+			<p>
+				Logged in: <%= current_user.name %>
+				<%= link_to( ' log out', destroy_user_session_path, method: :delete ) %>
+			</p>
 		<% else %>
 			<%= content_tag :p, link_to( 'log in', new_user_session_path, :method => :create) %>
 		<% end %>
