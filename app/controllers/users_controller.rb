@@ -49,7 +49,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:id, :name, :email, :password)
+      params.require(:user).permit(:id, :name, :email, :password, {:role_ids => []})
     end
 
     # Get the sought user once
