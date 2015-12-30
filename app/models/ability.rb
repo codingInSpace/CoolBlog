@@ -14,6 +14,8 @@ class Ability
       cannot [:read, :update, :create, :destroy], Role
       can :write_article, User
     else
+      can :read, :all
+      can :create, User
       cannot [:update, :create, :destroy], Article
     end
   end
