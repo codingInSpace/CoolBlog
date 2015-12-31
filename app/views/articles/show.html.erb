@@ -4,6 +4,7 @@
 	<h1> <%= @article.title %> </h1>
 	<p> <%= @article.text %> </p>
 	<%= link_to_if(can?(:write_article, User), 'Edit', edit_article_path(@article)){} %>
+	<br>
 
 	<div class="comments">
 		<% if @article.comments.count > 0 %>
@@ -11,6 +12,7 @@
 		<% end %>
 
 		<%= render @article.comments %>
+		<br>
 
 		<h4>Add a comment:</h4>
 		<%= render 'comments/form' %>
