@@ -2,7 +2,7 @@
 
 <div class="post">
 	<h1> <%= @article.title %> </h1>
-	<p class="info-text">Posted <%= @article.created_at %> </p>
+	<p class="info-text">Posted <%= @article.created_at %> by <%= User.find(@article.user_id).name %></p>
 	<p> <%= @article.text %> </p>
 	<%= link_to_if(can?(:write_article, User), 'Edit', edit_article_path(@article)){} %>
 	<br>
