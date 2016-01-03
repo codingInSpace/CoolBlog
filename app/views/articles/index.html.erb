@@ -2,7 +2,7 @@
 
 <% @articles.each do |article| %>
 	<div class="post">
-		<h2><%= article.title %></h2>
+		<%= content_tag :h2, link_to(article.title, article_path(article), :class => "article-title") %>
 		<p class="info-text">Posted <%= article.created_at %> by <%= User.find(article.user_id).name %> </p>
 		<p><%= article.text %></p>
 		<div class="action-links">

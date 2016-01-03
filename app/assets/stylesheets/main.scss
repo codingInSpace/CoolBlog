@@ -43,6 +43,11 @@ a:focus {
   border-top: solid 1px rgba(30, 30, 30, 0.1);
 }
 
+.article-title {
+	text-decoration: none;
+	color: $darkblue;
+}
+
 .info-text {
 	font-size: 10px; 
 	color: lighten(black, 60%);
