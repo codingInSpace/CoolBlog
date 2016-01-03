@@ -43,6 +43,13 @@ a:focus {
   border-top: solid 1px rgba(30, 30, 30, 0.1);
 }
 
+.info-text {
+	font-size: 10px; 
+	color: lighten(black, 60%);
+	line-height: 60%;
+	padding-bottom: 5px;
+}
+
 .comments {
   margin-left: 20px;
 }

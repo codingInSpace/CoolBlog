@@ -3,6 +3,7 @@
 <% @articles.each do |article| %>
 	<div class="post">
 		<h2><%= article.title %></h2>
+		<p class="info-text">Posted <%= article.created_at %> </p>
 		<p><%= article.text %></p>
 		<div class="action-links">
 			<p>
