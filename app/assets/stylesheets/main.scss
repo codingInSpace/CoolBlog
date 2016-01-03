@@ -29,6 +29,22 @@ a:focus {
 	right: 2em;
 }
 
+.bluebutton {
+	border: 2px solid $diminishedblue;
+	border-radius: 1px;
+	padding: 0 5px;
+}
+.bluebutton:hover {
+	background-color: darken($darkblue, 7%);
+	border-color: $highlightblue;
+}
+.bluebutton a {
+	text-decoration: none;
+}
+.bluebutton a:hover {
+	color: $highlightblue;
+}
+
 .bar {
    background: $darkblue;
    color: #fff;
@@ -92,4 +108,9 @@ a:focus {
   .bar {
     padding: 10px;
   }
+
+	.bluebutton {
+		padding: 3px 30px;
+	}
+
 }

@@ -4,9 +4,14 @@
 	<div class="account-info">
 		<% if user_signed_in? %>
 			<p> Logged in: <%= current_user.name %> (<%= Role.find(current_user.role_ids).first.name %>) </p>
-			<%= content_tag :p, link_to( 'log out', destroy_user_session_path, method: :delete ) %>
+			<div class="bluebutton pull-right">
+				<%= link_to( 'log out', destroy_user_session_path, method: :delete ) %>
+			</div>
+
 		<% else %>
-			<%= content_tag :p, link_to( 'log in', new_user_session_path, :method => :create) %>
+			<div class="bluebutton pull-right">
+				<%= link_to( 'log in', new_user_session_path, :method => :create) %>
+			</div>
 		<% end %>
 	</div>
 
