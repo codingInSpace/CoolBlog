@@ -1,5 +1,7 @@
-<%= link_to(icon('chevron-left') + 'Back', articles_path) %>
-
+<div class="mainbutton pull-left">
+	<%= link_to(icon('angle-left', '', class: 'fa-fw fa-lg') + 'Back', root_path, :class => 'btn') %>
+</div>
+<br>
 <div class="post">
 	<h1> <%= @article.title %> </h1>
 	<p class="info-text">Posted <%= @article.created_at %> by <%= User.find(@article.user_id).name %></p>

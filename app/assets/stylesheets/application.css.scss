@@ -36,19 +36,40 @@ a:focus {
 	right: 2em;
 }
 
-.bluebutton {
+.headerbutton {
 	border: 2px solid $diminishedblue;
 	border-radius: 1px;
 	padding: 0 5px;
 }
-.bluebutton:hover {
+.headerbutton:hover {
 	background-color: darken($darkblue, 7%);
 	border-color: $highlightblue;
 }
-.bluebutton a {
+.headerbutton a {
 	text-decoration: none;
 }
-.bluebutton a:hover {
+.headerbutton a:hover {
+	color: $highlightblue;
+}
+
+.mainbutton {
+	border: 2px solid $diminishedblue;
+	border-radius: 1px;
+}
+.mainbutton .btn {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 0;
+//	padding: 4px 0 4px auto;
+}
+.mainbutton:hover {
+	background-color: darken(white, 7%);
+	border-color: $highlightblue;
+}
+.mainbutton a {
+	text-decoration: none;
+}
+.mainbutton a:hover {
 	color: $highlightblue;
 }
 
@@ -116,7 +137,7 @@ a:focus {
     padding: 10px;
   }
 
-	.bluebutton {
+	.headerbutton {
 		padding: 3px 30px;
 	}
 
