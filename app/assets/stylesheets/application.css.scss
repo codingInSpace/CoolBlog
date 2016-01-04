@@ -24,10 +24,18 @@ a:focus {
     text-decoration: underline;
 }
 
+h1, h2, h3, h4 {
+	color: $darkblue;
+}
+
 .header {
     text-align: center;
     top: auto;
     margin: 3em auto;
+}
+
+.header h1 {
+	color: white;
 }
 
 .header .account-info {
