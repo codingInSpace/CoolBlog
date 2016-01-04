@@ -1,11 +1,23 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
-  <p> Name </p>
-	<%= f.text_field :commenter %>
+	<div class="row">
+		<div class="col-sm-4">
+			<p> Your name </p>
+			<%= f.text_field :commenter, :class => 'form-control' %>
+		</div>
+	</div>
 
-  <p> Text </p>
-	<%= f.text_area :body %>
+	<div class="row">
+		<div class="col-sm-4">
+			<p> Your comment </p>
+			<%= f.text_area :body, :class => 'form-control' %>
+		</div>
+	</div>
 
 	<br>
 
-	<%= f.submit %> 
+	<div class="row">
+		<div class="col-sm-4 ">
+			<%= f.submit :value => "Post comment", :class => 'btn btn-primary btn-md'  %> 
+		</div>
+	</div>
 <% end %>
